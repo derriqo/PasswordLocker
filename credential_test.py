@@ -100,5 +100,7 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(Credential.display_credentials(),Credential.credential_list)
 
+    def test_copy_email(self):
+
 if __name__ == '__main__':
     unittest.main()
