@@ -1,6 +1,6 @@
-class Credentials:   
+class Credential:   
     """
-    Class that generates new instances of contacts.
+    Class that generates new instances of credentials.
     """
 
     credential_list = [] # Empty credential list
@@ -17,61 +17,76 @@ class Credentials:
 
     credential_list = [] # Empty credential list
  # Init method up here
-    def save_contact(self):
+    def save_credential(self):
 
         '''
-        save_contact method saves contact objects into contact_list
+        save_credential method saves credential objects into credential_list
         '''
 
     
-        Contact.contact_list.append(self)
+        Credential.credential_list.append(self)
 
-    def delete_contact(self):
+    def delete_credential(self):
 
         '''
-        delete_contact method deletes a saved contact from the contact_list
+        delete_credential method deletes a saved credential from the credential_list
         '''
 
-        Contact.contact_list.remove(self)
+        Credential.credential_list.remove(self)
     
     @classmethod
     def find_by_number(cls,number):
         '''
-        Method that takes in a number and returns a contact that matches that number.
+        Method that takes in a number and returns a credential that matches that number.
 
         Args:
             number: Phone number to search for
         Returns :
-            Contact of person that matches the number.
+            Credential of person that matches the number.
         '''
 
-        for contact in cls.contact_list:
-            if contact.phone_number == number:
-                return contact
+        for credential in cls.credential_list:
+            if credential.phone_number == number:
+                return credential
     
     @classmethod
-    def contact_exist(cls,number):
+    def credential_exist(cls,number):
         '''
-        Method that checks if a contact exists from the contact list.
+        Method that checks if a credential exists from the credential list.
         Args:
             number: Phone number to search if it exists
         Returns :
-            Boolean: True or false depending if the contact exists
+            Boolean: True or false depending if the credential exists
         '''
-        for contact in cls.contact_list:
-            if contact.phone_number == number:
+        for credential in cls.credential_list:
+            if credential.phone_number == number:
+                return True
+
+        return False
+    
+    @classmethod
+    def credential_exist(cls,number):
+        '''
+        Method that checks if a credential exists from the credential list.
+        Args:
+            number: Phone number to search if it exists
+        Returns :
+            Boolean: True or false depending if the credential exists
+        '''
+        for credential in cls.credential_list:
+            if credential.phone_number == number:
                     return True
 
         return False
 
     @classmethod
-    def display_contacts(cls):
+    def display_credentials(cls):
         '''
-        method that returns the contact list
+        method that returns the credential list
         '''
-        return cls.contact_list
+        return cls.credential_list
 
-    @classmethod
-    def copy_email(cls,number):
-        contact_found = Contact.find_by_number(number)
-        pyperclip.copy(contact_found.email)
+#     @classmethod
+#     def copy_email(cls,number):
+#         credential_found = Credential.find_by_number(number)
+#         pyperclip.copy(credential_found.email)
