@@ -46,11 +46,18 @@ def copy_email(email):
         return Credential.copy_email(email)
 
 def main():
-        print("Hello Welcome to your credential list. What is your name?")
+        print("Hello Welcome to your Password Locker. What is your name?")
         user_name = input()
 
-        print(f"Hello {user_name}. what would you like to do?")
+        print(f"Hello {user_name}. Are you an Existing User or a New User?")
         print('\n')
+
+        while True:
+            print("Use these short codes :eu - Existing User, nu - New User")
+
+            short_code = input().lower()
+
+            if short_code ==
 
         while True:
                 print("Use these short codes : cc - create a new credential, dc - display credentials, fc -find a credential, ex -exit the credential list ")
