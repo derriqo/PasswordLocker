@@ -3,18 +3,19 @@ class Credentials:
     Class that generates new instances of contacts.
     """
 
-    contact_list = [] # Empty contact list
+    credential_list = [] # Empty credential list
 
-    def __init__(self,app_name,last_name,number,email):
+    def __init__(self,app_name,first_name,last_name,number,email):
 
       # docstring removed for simplicity
 
         self.app_name = app_name
+        self.first_name = first_name
         self.last_name = last_name
         self.phone_number = number
         self.email = email
 
-    contact_list = [] # Empty contact list
+    credential_list = [] # Empty credential list
  # Init method up here
     def save_contact(self):
 

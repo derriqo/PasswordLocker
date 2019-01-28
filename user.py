@@ -16,22 +16,22 @@ def __init__(self,user_name,email,password):
 
   user_list = [] # Empty contact list
  # Init method up here
-    def save_contact(self):
+    def save_user(self):
 
         '''
-        save_contact method saves contact objects into contact_list
+        save_user method saves user objects into user_list
         '''
 
     
-        Contact.contact_list.append(self)
+        User.user_list.append(self)
 
-    def delete_contact(self):
+    def delete_user(self):
 
         '''
-        delete_contact method deletes a saved contact from the contact_list
+        delete_user method deletes a saved user from the user_list
         '''
 
-        Contact.contact_list.remove(self)
+        User.user_list.remove(self)
     
     @classmethod
     def find_by_number(cls,number):
