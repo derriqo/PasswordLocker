@@ -1,4 +1,6 @@
 #!/usr/bin/env python3.6
+import os
+os.system('setterm -background cyan -foreground black -store')
 from credential import Credential
 
 def create_credential(app,fname,lname,phone,email):
