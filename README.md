@@ -1,6 +1,4 @@
-# ![Taste-Maker](img/README.png)
-
-# TASTEMAKER
+# PASSWORD LOCKER
 
 
 # Table of contents
@@ -16,17 +14,23 @@
 
 ## General info
 ---
-Taste-Maker is an application that simplifies the process of **food choice** when ordering food from a restaurant or online food delivery store. A user filters the long list of food items by selecting his/her favourite ingredient.
-
-There are too many food choices online and food lovers seek convenience in choosing what they feel like eating.
-The websites that offer take-away food options like Yum, Uber Eats and Jumia foods have focused on importing menus that are not simplified.
+PasswordLocker as the name suggests is an application that enables users to manage their individual passwords and furthermore generates new passwords for them.
 
 The application allows the user to:
 
-* Simplify the process of food choice
+* Create a password locker account with their details, a login username and a password.
 
-* Understand the basic ingredients in non-local cuisines, and order foods from these restaurants.
-* Acquire a palate for different tastes and cuisines. For example, that having Chop Suey for dinner...is simply chinese meat stew.
+* Store already existing account credentials in the application .
+
+* Create new account credentials in the application .
+
+* Have the option of putting in a password that they want to use for the new credential account.
+
+* Auto generate their password using the application.
+
+* To view various account credentials and their password in the application.
+
+* Delete a credentials account that they no longer need.
 
 
 ## Technologies
