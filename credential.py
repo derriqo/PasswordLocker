@@ -16,6 +16,7 @@ class Credential:
         self.email = email
 
     credential_list = [] # Empty credential list
+
  # Init method up here
     def save_credential(self):
 
@@ -90,3 +91,22 @@ class Credential:
     def copy_email(cls,number):
         credential_found = Credential.find_by_number(number)
         pyperclip.copy(credential_found.email)
+
+class User:
+    """
+    Class that generates new instances of users.
+    """
+
+    user_list = [] #Empty user list
+
+    def __init__(self,user_name,password):
+
+      # docstring removed for simplicity
+
+        self.user_name = user_name
+        self.password = password
+        
+
+    user_list = [] # Empty user list 
+
+    

@@ -1,5 +1,6 @@
 import unittest # Importing the unittest module
 from credential import Credential # Importing the credential class
+# from user import User #Importing the user class
 import pyperclip
 
 class TestCredential(unittest.TestCase):
@@ -17,8 +18,7 @@ class TestCredential(unittest.TestCase):
         Set up method to run before each test cases.
         '''
         self.new_credential = Credential("Facebook","James","Muriuki","0712345678","james@ms.com") # create credential object
-
-
+    
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
@@ -100,7 +100,6 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(Credential.display_credentials(),Credential.credential_list)
 
-    def test_copy_email(self):
-
-if __name__ == '__main__':
+        
+if __name__== '__main__':
     unittest.main()
