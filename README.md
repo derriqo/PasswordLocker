@@ -37,30 +37,33 @@ The application allows the user to:
 ---
 Project is created with:
 * Python 3.6
-* Pip
-* Pyperclip
+* Prerequisites:   *Pip ,Pyperclip*
+
 
 ## Setup
 ---
 To run this project, please follow the following instructions.
 -   Get access to the internet
--   Sign into your github pages. Set up would require access to github pages; the webpage uses an index file linked on github pages. This would require membership and access to the Derriqo repository.
+-   Sign into your github pages. Set up would require access to github pages; the webpage uses an index file linked on github pages. This would require membership and access to the **derriqo** repository.
 -   Search for derriqo on the github pages and select the Password-Locker repository.
 -   Clone the repository.
 
 ### Cloning
+---
 * In your terminal:
         
         $ git clone https://github.com/derriqo/Password-Locker/
         $ cd Password-Locker
 
 ## Running the Application
+---
 * To run the application, in your terminal:
 
         $ chmod +x password_locker.py
         $ ./run.py
         
 ## Testing the Application
+---
 * To run the tests for the class file:
 
         $ python3.6 credentials_test.py
@@ -72,12 +75,15 @@ To run this project, please follow the following instructions.
 **User Story**
 As a user i want to be able to store my account credentials and their various passwords and also  be able to delete them.
 
-| Inputs|Outputs|User Behavior|
-|-------|-------|-------------|
-| Click button    |  Navigation to search page | User elects to begin search |
-| Drop-down menu ingredient selected | Navigation to recipe page | Preference input |
-| Return button         |   Takes user back to home page| User willingness to participate in process again|
-
+| Behaviour | Input | Output |
+| :---------------- | :---------------: | ------------------: |
+| Welcomes user to the applicatin | **In terminal: $./run.py** | Hello, Welcome to Password Locker. What is your name? |
+| Display codes for navigation | **In terminal: User enters Name** | Use these short codes : cc - create a new credential, dc - display credentials, fc -find a credential, ex -exit the credential list  |
+| Display prompt for creating account | **Enter: cc** | Enter your first name, last name and password |
+| Display prompt for login in | **Enter: li** | Enter your account name and password |
+| Display prompt for creating a credential | **Enter: cc** | Enter the site name, your username and password |
+| Display a list of credentials | **Enter: dc** | Prints a list of saved credentials |
+| Exit application | **Enter: ex** | Exit the current navigation stage |
 
 
 ## Support and contact details
