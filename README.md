@@ -64,9 +64,9 @@ To run this project, please follow the following instructions.
         
 ## Testing the Application
 ---
-* To run the tests for the class file:
+* To run the tests for the application file:
 
-        $ python3.6 credentials_test.py
+        $ python3.6 credential_test.py
         
 
 ## Behaviour Driven Development
