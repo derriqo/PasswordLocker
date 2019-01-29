@@ -9,7 +9,7 @@
 * [Behaviour Driven Technologies](#Behaviour-Driven-Technologies)
 * [Support](#Support)
 * [Bugs](#Bugs)
-* [Team](#Team)
+* [Creator](#Creator)
 * [License](#License)
 
 ## General info
@@ -36,23 +36,41 @@ The application allows the user to:
 ## Technologies
 ---
 Project is created with:
-* HTML5
-* Cascading Style Sheets
-* JavaScript
+* Python 3.6
+* Pip
+* Pyperclip
 
 ## Setup
 ---
 To run this project, please follow the following instructions.
 -   Get access to the internet
 -   Sign into your github pages. Set up would require access to github pages; the webpage uses an index file linked on github pages. This would require membership and access to the Derriqo repository.
--   Search for derriqo on the github pages and select the Taste-Maker repository.
--   Git-hub Webpage is linked to the title of the file.
+-   Search for derriqo on the github pages and select the Password-Locker repository.
+-   Clone the repository.
+
+### Cloning
+* In your terminal:
+        
+        $ git clone https://github.com/derriqo/Password-Locker/
+        $ cd Password-Locker
+
+## Running the Application
+* To run the application, in your terminal:
+
+        $ chmod +x password_locker.py
+        $ ./run.py
+        
+## Testing the Application
+* To run the tests for the class file:
+
+        $ python3.6 credentials_test.py
+        
 
 ## Behaviour Driven Development
 ---
 
 **User Story**
-As a user I want to be able to reduce broad menu options to a select list of dishes based on my preferences.
+As a user i want to be able to store my account credentials and their various passwords and also  be able to delete them.
 
 | Inputs|Outputs|User Behavior|
 |-------|-------|-------------|
@@ -64,39 +82,13 @@ As a user I want to be able to reduce broad menu options to a select list of dis
 
 ## Support and contact details
 ---
-For any inquiries, please reach out to info@tastemaker.com
+For any inquiries, please reach out to derrick.william24@yahoo.com
 
 ## Bugs
 ---
 None at the moment, but would love to hear your feedback!
 
-## Team
+## Creator
 ---
 
-Created by Derrick William, Sharon Adino, Mara Jackson, Victor Oyugi, Stephanie Winam
-
-Created by Derrick William, Sharon Adino, Mara Jackson, Victor Oyugi, Stephanie Winam
-
-## License
----
-The MIT License (MIT)
-
-Copyright (c) 2018
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Created by Derrick William. 
