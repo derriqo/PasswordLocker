@@ -11,24 +11,23 @@ class TestCredential(unittest.TestCase):
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
     '''
-        # Items up here .......
 
     def setUp(self):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_credential = Credential("Facebook","James","Muriuki","0712345678","james@ms.com") # create credential object
+        self.new_credential = Credential("James","Facebook","James12345","0712345678") # create credential object
     
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
         '''
-
+     
+        self.assertEqual(self.new_credential.user_name,"James")
         self.assertEqual(self.new_credential.app_name,"Facebook")
-        self.assertEqual(self.new_credential.first_name,"James")
-        self.assertEqual(self.new_credential.last_name,"Muriuki")
-        self.assertEqual(self.new_credential.phone_number,"0712345678")
-        self.assertEqual(self.new_credential.email,"james@ms.com")
+        self.assertEqual(self.new_credential.app_username,"James12345")
+        self.assertEqual(self.new_credential.app_password,"0712345678")
+       
 
     def test_save_credential(self):
         '''
@@ -38,13 +37,12 @@ class TestCredential(unittest.TestCase):
         self.new_credential.save_credential() # saving the new credential
         self.assertEqual(len(Credential.credential_list),1)
 
-    # setup and class creation up here
 
     def tearDown(self):
-            '''
-            tearDown method that does clean up after each test case has run.
-            '''
-            Credential.credential_list = []
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        Credential.credential_list = []
     
     def test_save_multiple_credential(self):
         '''
@@ -52,33 +50,33 @@ class TestCredential(unittest.TestCase):
         objects to our credential_list
         '''
         self.new_credential.save_credential()
-        test_credential = Credential("App","Test","user","0712345678","test@user.com") # new credential
+        test_credential = Credential("Derrick","Google","Derrickuser","sdfsfas") # new credential
         test_credential.save_credential()
         self.assertEqual(len(Credential.credential_list),2)
 
     def test_delete_credential(self):
-            '''
-            test_delete_credential to test if we can remove a credential from our credential list
-            '''
-            self.new_credential.save_credential()
-            test_credential = Credential("App","Test","user","0712345678","test@user.com") # new credential
-            test_credential.save_credential()
-
-            self.new_credential.delete_credential()# Deleting a credential object
-            self.assertEqual(len(Credential.credential_list),1)
-
-    def test_find_credential_by_number(self):
         '''
-        test to check if we can find a credential by phone number and display information
+        test_delete_credential to test if we can remove a credential from our credential list
+        '''
+        self.new_credential.save_credential()
+        test_credential = Credential("Derrick","Google","Derrickuser","sdfsfas")  # new credential
+        test_credential.save_credential()
+
+        self.new_credential.delete_credential()# Deleting a credential object
+        self.assertEqual(len(Credential.credential_list),1)
+
+    def test_find_credential_by_appname(self):
+        '''
+        test to check if we can find a credential by Application name and display information
         '''
 
         self.new_credential.save_credential()
-        test_credential = Credential("App","Test","user","0711223344","test@user.com") # new credential
+        test_credential = Credential("Derrick","Google","Derrickuser","sdfsfas")  # new credential
         test_credential.save_credential()
 
-        found_credential = Credential.find_by_number("0711223344")
+        found_credential = Credential.find_by_appname("Google")
 
-        self.assertEqual(found_credential.email,test_credential.email)
+        self.assertEqual(found_credential.app_name,test_credential.app_name)
     
     def test_credential_exists(self):
         '''
@@ -86,10 +84,10 @@ class TestCredential(unittest.TestCase):
         '''
 
         self.new_credential.save_credential()
-        test_credential = Credential("App","Test","user","0711223344","test@user.com") # new credential
+        test_credential = Credential("Derrick","Google","Derrickuser","sdfsfas")  # new credential
         test_credential.save_credential()
 
-        credential_exists = Credential.credential_exist("0711223344")
+        credential_exists = Credential.credential_exist("Google")
 
         self.assertTrue(credential_exists)
     
@@ -100,6 +98,11 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(Credential.display_credentials(),Credential.credential_list)
 
+    def test_generate_password(self):
+        '''
+        method that tests if passwords are being generated
+        '''
+        self.assertTrue(Credential.generate_password(self))
         
 if __name__== '__main__':
     unittest.main()

@@ -1,23 +1,25 @@
+import random
 class Credential:   
     """
     Class that generates new instances of credentials.
     """
 
     credential_list = [] # Empty credential list
-
-    def __init__(self,app_name,first_name,last_name,number,email):
-
-      # docstring removed for simplicity
-
+    
+    def __init__(self,user_name,app_name,app_username,app_password):
+        '''
+        Test init test case to test if the object is instantiated correctly
+        '''
+      
+        self.user_name = user_name
         self.app_name = app_name
-        self.first_name = first_name
-        self.last_name = last_name
-        self.phone_number = number
-        self.email = email
+        self.app_username = app_username
+        self.app_password = app_password
+       
 
-    credential_list = [] # Empty credential list
+        credential_list = [] # Empty credential list
 
- # Init method up here
+
     def save_credential(self):
 
         '''
@@ -36,49 +38,42 @@ class Credential:
         Credential.credential_list.remove(self)
     
     @classmethod
-    def find_by_number(cls,number):
+    def find_by_appname(cls,appname):
         '''
-        Method that takes in a number and returns a credential that matches that number.
+        Method that takes in a appname and returns a credential that matches that appname.
 
         Args:
-            number: Phone number to search for
+            appname: Phone appname to search for
         Returns :
-            Credential of person that matches the number.
+            Credential of person that matches the appname.
         '''
 
         for credential in cls.credential_list:
-            if credential.phone_number == number:
+            if credential.app_name == appname:
                 return credential
     
     @classmethod
-    def credential_exist(cls,number):
+    def credential_exist(cls,appname):
         '''
         Method that checks if a credential exists from the credential list.
         Args:
-            number: Phone number to search if it exists
+            appname: Phone appname to search if it exists
         Returns :
             Boolean: True or false depending if the credential exists
         '''
         for credential in cls.credential_list:
-            if credential.phone_number == number:
+            if credential.app_name == appname:
                 return True
 
         return False
-    
-    @classmethod
-    def credential_exist(cls,number):
-        '''
-        Method that checks if a credential exists from the credential list.
-        Args:
-            number: Phone number to search if it exists
-        Returns :
-            Boolean: True or false depending if the credential exists
-        '''
-        for credential in cls.credential_list:
-            if credential.phone_number == number:
-                    return True
 
-        return False
+    def generate_password(self):
+        char="ABCDEFGHIJKLMNOPQRSTUVWXYXabcdefghijklmnopqrstuvwxyx1234567890"
+        password =""
+        for i in range(8):
+            password+=random.choice(char)
+        return password    
+
 
     @classmethod
     def display_credentials(cls):
@@ -87,26 +82,5 @@ class Credential:
         '''
         return cls.credential_list
 
-    @classmethod
-    def copy_email(cls,number):
-        credential_found = Credential.find_by_number(number)
-        pyperclip.copy(credential_found.email)
-
-class User:
-    """
-    Class that generates new instances of users.
-    """
-
-    user_list = [] #Empty user list
-
-    def __init__(self,user_name,password):
-
-      # docstring removed for simplicity
-
-        self.user_name = user_name
-        self.password = password
-        
-
-    user_list = [] # Empty user list 
 
     
